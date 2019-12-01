@@ -7,7 +7,7 @@ The `keycloak/docker-compose-postgres.yml` template creates a volume for Postgre
 
 Run the example with the following command:
 
-    `docker-compose -f keycloak/docker-compose-postgres.yml up`
+    `docker-compose -f ./keycloak/docker-compose-postgres.yml up`
 
 Open http://localhost:8282/auth and login as user 'admin' with password 'admin'.
 
@@ -55,12 +55,28 @@ That’s all for the **Keycloak** configuration. All your configured groups, rol
 
 ## Starting the frontend React application
 
-
 Run the following commands:
 ``` 
-npm --prefix frontend/ install
+npm --prefix ./frontend/ install
 
-npm --prefix frontend/ start
+npm --prefix ./frontend/ start
 ```
 
 Visit http://localhost:3000 and login with any of your created users
+
+## Building the MicroProfile backend application
+
+1. ### payara-micro
+
+```
+ mvn -f ./backend-payara-micro/pom.xml clean package
+```
+
+This will create an executable jar file **shikanga-microprofile-auth-keycloak-microbundle.jar** within the _target_ maven folder. 
+This can be started by executing the following command
+
+```
+java -jar ./backend-payara-micro/target/shikanga-microprofile-auth-keycloak-microbundle.jar --port 8180
+```
+
+

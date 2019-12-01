@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/shikanga-microprofile-auth-keycloak.iml" filepath="$PROJECT_DIR$/.idea/shikanga-microprofile-auth-keycloak.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend-payara-micro/backend-payara-micro.iml" filepath="$PROJECT_DIR$/backend-payara-micro/backend-payara-micro.iml" />
     </modules>
   </component>
 </project>
