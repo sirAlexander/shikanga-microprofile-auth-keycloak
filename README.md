@@ -1,5 +1,5 @@
-# shikanga-microprofile-auth-jwt-keycloak-postgres-react
-An Eclipse MicroProfile based authentication implementation based on jwt, keycloak, PostgresSQL and React
+# shikanga-microprofile-auth-keycloak
+An Eclipse MicroProfile based authentication implementation based on JWT, Keycloak, PostgresSQL and ReactJS
 
 ## Keycloak and PostgreSQL
 
