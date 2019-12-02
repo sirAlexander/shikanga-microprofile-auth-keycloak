@@ -66,17 +66,35 @@ Visit http://localhost:3000 and login with any of your created users
 
 ## Building the MicroProfile backend application
 
-1. ### payara-micro
+1. ### quarkus-smallrye-jwt
+
+The `quarkus` backend project was generated via the following maven command. 
+```mvn io.quarkus:quarkus-maven-plugin:1.0.1.Final:create \
+    -DprojectGroupId=uk.co.shikanga.microprofile \
+    -DprojectArtifactId=shikanga-microprofile-auth-keycloak \
+    -DclassName="uk.co.shikanga.microprofile.secure.ProtectedResource" \
+    -Dpath="/secured" \
+    -Dextensions="resteasy-jsonb, jwt"
+```
+The project generated was then renamed to `backend-quarkus-smallrye-jwt` to follow the backend naming convention
+
+To run the project in dev mode use the following command:
+```
+mvn -f ./backend-quarkus-smallrye-jwt/pom.xml compile quarkus:dev
+```
+
+* #### How to package and run the application
 
 ```
- mvn -f ./backend-payara-micro/pom.xml clean package
+ mvn -f ./backend-quarkus-smallrye-jwt/pom.xml clean package
 ```
-
-This will create an executable jar file **shikanga-microprofile-auth-keycloak-microbundle.jar** within the _target_ maven folder. 
+This will create an executable jar file **shikanga-microprofile-auth-keycloak-runner.jar** within the _target_ maven folder. 
 This can be started by executing the following command
 
 ```
-java -jar ./backend-payara-micro/target/shikanga-microprofile-auth-keycloak-microbundle.jar --port 8180
+java -jar ./backend-quarkus-smallrye-jwt/target/shikanga-microprofile-auth-keycloak-1.0-SNAPSHOT-runner.jar
 ```
+
+
 
 
