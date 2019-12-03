@@ -79,4 +79,8 @@ This can be started by executing the following command
 java -jar ./backend-payara-micro/target/shikanga-microprofile-auth-keycloak-microbundle.jar --port 8180
 ```
 
+2. ### quarkus-smallrye-jwt
 
+A Quarkus, SmallRye, JWT version of this can be found here:
+
+https://github.com/sirAlexander/shikanga-microprofile-auth-keycloak/tree/quarkus-smallrye-jwt
